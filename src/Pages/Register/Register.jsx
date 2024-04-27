@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaEye,FaEyeSlash } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Firebase/AuthProvider/AuthProvider";
+import log from '../../assets/login.json'
+import Lottie from "lottie-react";
 
 import Swal from 'sweetalert2'
 
@@ -72,7 +74,8 @@ const Register = () => {
   }
 
   return (
-    <div className="bg-white  max-w-md md:max-w-5xl lg:max-w-7xl p-1 md:p-10 lg:p-10">
+    <div className="bg-white flex max-w-md md:max-w-5xl lg:max-w-7xl p-1 md:p-10 lg:p-10">
+      <Lottie className="w-[300px]" animationData={log}></Lottie>
        <form onSubmit={handleSubmit(onSubmit)} className="w-4/5 md:w-3/5 lg:w-2/5 mx-auto p-3 bg-white shadow-md border lg:p-9 my-5 space-y-3 rounded">
        <h1 className="text-3xl animate__animated animate__backInDown font-semibold text-center uppercase">Register</h1>
        <div className="form-control">
