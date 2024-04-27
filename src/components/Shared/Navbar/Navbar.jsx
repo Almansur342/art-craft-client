@@ -35,7 +35,7 @@ const Navbar = () => {
  
   </div>
   return (
-    <div className="navbar max-w-6xl mx-auto mt-5">
+    <div className="navbar mb-7 max-w-6xl mx-auto mt-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -58,7 +58,7 @@ const Navbar = () => {
       {user ?
          <div className="flex items-center gap-5">
           <div className="tooltip tooltip-bottom" data-tip={user?.displayName || 'mansur abdullah'}>
-          <img className="w-16 lg:w-20 h-16 rounded-full border-2" src={user?.photoURL || 'Image not found'} alt="" />
+          <img className="object-cover w-16 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={user?.photoURL || 'Image not found'} alt="" />
           {/* <img src={user.photoURL} alt="" /> */}
           </div>
           {/* <p>{user?.displayName || 'mansur abdullah'}</p> */}
@@ -69,6 +69,9 @@ const Navbar = () => {
         <div>
           <Link to='/login'>
             <button className="px-3 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Login</button>
+          </Link>
+          <Link to='/register'>
+            <button className="px-3 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Register</button>
           </Link>
         </div>
         }

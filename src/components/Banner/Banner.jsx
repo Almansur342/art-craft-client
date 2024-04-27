@@ -14,7 +14,7 @@ const Banner = () => {
     AOS.init();
   },[])
   return (
-    <div className="carousel w-full rounded my-10">
+    <div className="carousel w-full rounded">
   <div id="slide1" className="carousel-item relative w-full">
     <img data-aos="zoom-in" data-aos-duration = '1000' src={img4} className="w-full h-[470px] brightness-75" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">

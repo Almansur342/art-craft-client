@@ -72,8 +72,8 @@ const Register = () => {
   }
 
   return (
-    <div className="bg-slate-200  max-w-md md:max-w-5xl lg:max-w-7xl p-1 md:p-10 lg:p-10">
-       <form onSubmit={handleSubmit(onSubmit)} className="w-4/5 md:w-3/5 lg:w-2/5 mx-auto p-3 lg:p-9 my-5 bg-white space-y-3 rounded">
+    <div className="bg-white  max-w-md md:max-w-5xl lg:max-w-7xl p-1 md:p-10 lg:p-10">
+       <form onSubmit={handleSubmit(onSubmit)} className="w-4/5 md:w-3/5 lg:w-2/5 mx-auto p-3 bg-white shadow-md border lg:p-9 my-5 space-y-3 rounded">
        <h1 className="text-3xl animate__animated animate__backInDown font-semibold text-center uppercase">Register</h1>
        <div className="form-control">
           <label className="label">
@@ -123,9 +123,9 @@ const Register = () => {
              {errors.password && <span className="text-red-500">This field is required</span>}
           </div>
           <div className="form-control">
-            <button className="btn mt-6 bg-[#23BE0A] text-white ext-base lg:text-lg mb-3 uppercase">create an account</button>
+            <button className="btn mt-6 bg-[#b18b5e] text-white ext-base lg:text-lg mb-3 uppercase">create an account</button>
           </div>
-          <Link className="flex justify-center text-xs lg:text-base" to="/login">Already have an account?<span className="text-[#23BE0A] ml-1">Sign in.</span></Link>
+          <Link className="flex justify-center text-xs lg:text-base" to="/login">Already have an account?<span className="text-[#b18b5e] ml-1">Sign in.</span></Link>
         </form>
        
     </div>
