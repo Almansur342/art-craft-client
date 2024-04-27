@@ -1,21 +1,23 @@
-import { Link, NavLink, } from "react-router-dom";
+import { Link, NavLink, useNavigate, } from "react-router-dom";
 import logo from '../../../assets/logo.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../Firebase/AuthProvider/AuthProvider";
 
 
 
 const Navbar = () => {
-  // const {user,logOut} = useContext(AuthContext);
-  // const navigate = useNavigate();
-  // const handleLogOut = () =>{
-  //   logOut()
-  //   .then(result => {
-  //     console.log(result.user);
-  //     navigate('/');
-  //   })
-  //   .catch(error =>{
-  //     console.error(error);
-  //   })
-  // }
+  const {user,logOut} = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleLogOut = () =>{
+    logOut()
+    .then(result => {
+      console.log(result.user);
+      navigate('/');
+    })
+    .catch(error =>{
+      console.error(error);
+    })
+  }
 
   const navLink = <div className="flex items-center">
     <li className="font-bold text-base hover:text-[#b18b5e] hover:border-b border-b-[#b18b5e]"><NavLink to='/' className= {({ isActive }) => isActive ? '  text-[#b18b5e]' : 'text-[#131313CC] hover:text-[#b18b5e]'}>Home</NavLink></li>
@@ -53,15 +55,31 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        
+      {user ?
+         <div className="flex items-center gap-5">
+          <div className="tooltip tooltip-bottom" data-tip={user?.displayName || 'mansur abdullah'}>
+          <img className="w-16 lg:w-20 h-16 rounded-full border-2" src={user?.photoURL || 'Image not found'} alt="" />
+          {/* <img src={user.photoURL} alt="" /> */}
+          </div>
+          {/* <p>{user?.displayName || 'mansur abdullah'}</p> */}
+          <Link to='/'>
+            <button onClick={handleLogOut} className="px-3 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Sign out</button>
+          </Link>
+        </div> : 
         <div>
+          <Link to='/login'>
+            <button className="px-3 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Login</button>
+          </Link>
+        </div>
+        }
+        {/* <div>
           <Link to='/login'>
             <button className="px-3 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Login</button>
           </Link>
           <Link to='/register'>
             <button className="px-3 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Register</button>
           </Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );
