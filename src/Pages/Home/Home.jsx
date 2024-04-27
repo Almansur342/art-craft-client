@@ -1,5 +1,6 @@
 
 import Banner from '../../components/Banner/Banner';
+import ExtraSectionTwo from '../../components/ExtraSectionTwo/ExtraSectionTwo';
 import ExtraSectionOne from '../../components/extraSectionOne/ExtraSectionOne';
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <div>
      <Banner></Banner>
      <ExtraSectionOne></ExtraSectionOne>
+     <ExtraSectionTwo></ExtraSectionTwo>
     </div>
   );
 };
