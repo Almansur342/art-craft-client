@@ -22,7 +22,7 @@ const Navbar = () => {
   const navLink = <div className="flex items-center">
     <li className="font-bold text-base hover:text-[#b18b5e] hover:border-b border-b-[#b18b5e]"><NavLink to='/' className= {({ isActive }) => isActive ? '  text-[#b18b5e]' : 'text-[#131313CC] hover:text-[#b18b5e]'}>Home</NavLink></li>
 
-    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
+    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/addCraftItem' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
 
     <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
  
   </div>
   return (
-    <div className="navbar max-w-6xl mb-7 mx-auto mt-5">
+    <div className="navbar max-w-6xl mx-auto mt-5">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
