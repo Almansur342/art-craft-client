@@ -4,6 +4,7 @@ import ErrorPage from "../Pages/ErrorPage/ErroPage";
 import Home from "../Pages/Home/Home";
 import Register from "../Pages/Register/Register";
 import Login from './../Pages/Login/Login';
+import Details from "../Pages/Details/Details";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -12,7 +13,8 @@ const router = createBrowserRouter([
     children:[
       {
         path: '/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader: ()=> fetch('http://localhost:5000/craftItem')
       },
       {
         path:'/register',
@@ -21,6 +23,11 @@ const router = createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path: '/details/:id',
+        element:<Details></Details>,
+        loader:()=> fetch('http://localhost:5000/craftItem')
       }
     ]
   },
