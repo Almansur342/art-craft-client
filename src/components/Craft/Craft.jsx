@@ -1,13 +1,18 @@
+import { useEffect } from "react";
 import { IoIosStarOutline } from "react-icons/io";
+import AOS from 'aos';
 
 import { Link } from "react-router-dom";
 const Craft = ({ item }) => {
+  useEffect(()=>{
+    AOS.init();
+  },[])
   const { image, item_name, subcategory_name, price, rating, short_description,_id } = item || {}
   return (
-    <div className="card bg-[#f7f4ef] p-6 shadow-xl">
+    <div data-aos="fade-up" data-aos-duration = '1000' className="card bg-[#f7f4ef] p-6 shadow-xl">
       <figure><img className="h-56 w-full rounded-lg object-cover" src={image} alt="Shoes" /></figure>
-      <div className="">
-        <h2 className="text-xl text-[#34373f] font-semibold my-2">{item_name}</h2>
+      <div className="mt-2">
+        <h2 className="text-xl  text-[#34373f] font-semibold my-2">{item_name}</h2>
         <p className="text-lg font-medium"># {subcategory_name}</p>
         <hr className='my-4' />
         <div className='flex justify-between mb-4'>
