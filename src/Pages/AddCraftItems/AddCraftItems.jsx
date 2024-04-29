@@ -1,8 +1,20 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Firebase/AuthProvider/AuthProvider";
+import Swal from 'sweetalert2'
 
 const AddCraftItems = () => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: "top-end",
+    showConfirmButton: false,
+    timer: 3000,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.onmouseenter = Swal.stopTimer;
+      toast.onmouseleave = Swal.resumeTimer;
+    }
+  });
   const { user } = useContext(AuthContext);
   // console.log(user);
   const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -23,9 +35,13 @@ const AddCraftItems = () => {
     .then(res => res.json())
     .then(data =>{
       console.log(data);
-      
+      if(data.insertedId){
+        Toast.fire({
+          icon: 'success',
+          title: 'Product added successfully',
+        })
+      }
     })
-
   }
   
 

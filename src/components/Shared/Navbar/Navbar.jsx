@@ -22,9 +22,9 @@ const Navbar = () => {
   const navLink = <div className="flex items-center">
     <li className="font-bold text-base hover:text-[#b18b5e] hover:border-b border-b-[#b18b5e]"><NavLink to='/' className= {({ isActive }) => isActive ? '  text-[#b18b5e]' : 'text-[#131313CC] hover:text-[#b18b5e]'}>Home</NavLink></li>
 
-    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/addCraftItem' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
+    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/addCraftItem' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>Add Craft Item</NavLink></li>
 
-    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
+    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/myArtCraft' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>My Art&Craft List</NavLink></li>
 
     <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
 
