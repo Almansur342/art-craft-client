@@ -7,7 +7,20 @@ const MyCard = ({ item }) => {
   useEffect(() => {
     AOS.init();
   }, [])
-  const { image, item_name, subcategory_name, price, rating, short_description,_id} = item || {}
+  const { image, item_name, subcategory_name, price, rating, short_description,_id} = item || {};
+
+  const handleDelete = (id) =>{
+    fetch(`http://localhost:5000/delete/${id}`,{
+      method:'DELETE'
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    }
+     
+    )
+  }
+
   return (
     <div data-aos="fade-up" data-aos-duration = '1000' className="card bg-[#f7f4ef] p-6 shadow-xl">
       <figure><img className="h-56 w-full rounded-lg object-cover" src={image} alt="Shoes" /></figure>
@@ -27,7 +40,7 @@ const MyCard = ({ item }) => {
         <p className="mb-4">{short_description}</p>
         <div className="card-actions">
           <Link to={`/update/${_id}`} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">Update</Link>
-          <button className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">Delete</button>
+          <button onClick={()=>handleDelete(_id)} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">Delete</button>
           {/* <Link to={`/details/${_id}`} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">View Details</Link> */}
         </div>
       </div>

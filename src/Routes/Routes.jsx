@@ -7,6 +7,7 @@ import Login from './../Pages/Login/Login';
 import Details from "../Pages/Details/Details";
 import AddCraftItems from "../Pages/AddCraftItems/AddCraftItems";
 import MyCraftList from "../Pages/MyCraftList/MyCraftList";
+import Update from "../Pages/Update/Update";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -35,7 +36,10 @@ const router = createBrowserRouter([
       {
         path: '/item/:id',
         element:<Details></Details>,
-        
+      },
+      {
+        path: '/update/:id',
+        element:<Update></Update>,
       },
       {
         path:'/addCraftItem',
