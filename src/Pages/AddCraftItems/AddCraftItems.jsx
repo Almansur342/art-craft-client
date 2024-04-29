@@ -18,12 +18,12 @@ const AddCraftItems = () => {
   const { user } = useContext(AuthContext);
   // console.log(user);
   const { register, handleSubmit, formState: { errors }, } = useForm();
-  const [selectedSubcategory, setSelectedSubcategory] = useState('');
+  const [subcategory_name, setSelectedSubcategory] = useState('');
   const onSubmit = data => {
-    const { image, itemName, description, price, rating, customization, time, stockStatus } = data;
+    const { image, item_name, short_description, price, rating, customization, processing_time, stock_status } = data;
     const email = user?.email
     // console.log(user?.email, selectedSubcategory,image,itemName,description,price,rating,customization,time,stockStatus);
-    const info = {email,image, itemName,selectedSubcategory, description, price, rating, customization, time, stockStatus,}
+    const info = {email,image,item_name,subcategory_name, short_description, price, rating, customization, processing_time, stock_status}
     console.log(info);
     fetch('http://localhost:5000/addProduct',{
       method: 'POST',
@@ -67,8 +67,8 @@ const AddCraftItems = () => {
           <label className="label">
             <span className="label-text font-semibold text-base">Item Name:</span>
           </label>
-          <input type="text" placeholder="Item name" name="itemName" className="input input-bordered"
-            {...register("itemName", { required: true })}
+          <input type="text" placeholder="Item name" name="item_name" className="input input-bordered"
+            {...register("item_name", { required: true })}
           />
           {errors.itemName && <span className="text-red-500">This field is required</span>}
         </div>
@@ -76,7 +76,7 @@ const AddCraftItems = () => {
           <label className="label">
             <span className="label-text font-semibold text-base">Subcategory Name:</span>
           </label>
-          <select className="select" value={selectedSubcategory} onChange={handleSubcategoryChange}>
+          <select className="select" value={subcategory_name} onChange={handleSubcategoryChange}>
             <option disabled value="">Pick your sub category</option>
             <option value="ClaySculpture">Clay Sculpture
             </option>
@@ -93,8 +93,8 @@ const AddCraftItems = () => {
           <label className="label">
             <span className="label-text font-semibold text-base">Short Description:</span>
           </label>
-          <input type="text" placeholder="short description" name="description" className="input input-bordered"
-            {...register("description", { required: true })}
+          <input type="text" placeholder="short description" name="short_description" className="input input-bordered"
+            {...register("short_description", { required: true })}
           />
           {errors.description && <span className="text-red-500">This field is required</span>}
         </div>
@@ -129,8 +129,8 @@ const AddCraftItems = () => {
           <label className="label">
             <span className="label-text font-semibold text-base">Processing time:</span>
           </label>
-          <input type="text" placeholder="Processing time" name="time" className="input input-bordered"
-            {...register("time", { required: true })}
+          <input type="text" placeholder="Processing time" name="processing_time" className="input input-bordered"
+            {...register("processing_time", { required: true })}
           />
           {errors.time && <span className="text-red-500">This field is required</span>}
         </div>
@@ -142,9 +142,9 @@ const AddCraftItems = () => {
           <input
             type="text"
             placeholder="StockStatus"
-            name="stockStatus"
+            name="stock_status"
             className="input input-bordered"
-            {...register("stockStatus", { required: true })}
+            {...register("stock_status", { required: true })}
           />
           {errors.stockStatus && <span className="text-red-500">This field is required</span>}
         </div>

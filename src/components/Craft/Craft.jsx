@@ -26,7 +26,7 @@ const Craft = ({ item }) => {
         </div>
         <p className="mb-4">{short_description}</p>
         <div className="card-actions">
-          <Link to={`/details/${_id}`} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">View Details</Link>
+          <Link to={`/item/${_id}`} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">View Details</Link>
         </div>
       </div>
     </div>

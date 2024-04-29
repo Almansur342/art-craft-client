@@ -26,10 +26,16 @@ const router = createBrowserRouter([
         path:'/login',
         element:<Login></Login>
       },
+      // {
+      //   path: '/details/:id',
+      //   element:<Details></Details>,
+      //   loader:()=> fetch('http://localhost:5000/craftItem')
+      // },
+      
       {
-        path: '/details/:id',
+        path: '/item/:id',
         element:<Details></Details>,
-        loader:()=> fetch('http://localhost:5000/craftItem')
+        
       },
       {
         path:'/addCraftItem',
