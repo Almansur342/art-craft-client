@@ -1,24 +1,49 @@
-import { useEffect } from "react";
+
 import { IoIosStarOutline } from "react-icons/io";
 import AOS from 'aos';
 import { Link } from "react-router-dom";
-const MyCard = ({ item }) => {
+import { useEffect } from "react";
+import Swal from "sweetalert2";
+const MyCard = ({ items,item,setItems }) => {
+  
+  // console.log(deleteData);
   // console.log(item);
   useEffect(() => {
     AOS.init();
   }, [])
-  const { image, item_name, subcategory_name, price, rating, short_description,_id} = item || {};
+  const { image, item_name, subcategory_name, price, rating, short_description,_id,stock_status,customization} = item || {};
 
   const handleDelete = (id) =>{
-    fetch(`http://localhost:5000/delete/${id}`,{
-      method:'DELETE'
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/delete/${id}`,{
+        method:'DELETE'
     })
     .then(res => res.json())
     .then(data => {
-      console.log(data);
+      if(data.deletedCount > 0){
+        Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+        const remaining = items.filter(p => p._id !== id)
+        setItems(remaining);
+      }
     }
-     
     )
+      }
+    });
+
+    
   }
 
   return (
@@ -34,8 +59,12 @@ const MyCard = ({ item }) => {
             {rating}
           </div>
           <div>
-            {price}
+           ${price}
           </div>
+        </div>
+        <div  className='flex justify-between mb-4'>
+          <div>{stock_status}</div>
+          <div>{customization}</div>
         </div>
         <p className="mb-4">{short_description}</p>
         <div className="card-actions">

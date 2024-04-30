@@ -23,6 +23,8 @@ const MyCraftList = () => {
         items.map(item=><MyCard
            key={item._id}
            item={item}
+           setItems={setItems}
+           items={items}
            ></MyCard>)
       }
     </div>
