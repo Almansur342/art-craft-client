@@ -4,6 +4,8 @@ import Banner from '../../components/Banner/Banner';
 import ExtraSectionTwo from '../../components/ExtraSectionTwo/ExtraSectionTwo';
 import ExtraSectionOne from '../../components/extraSectionOne/ExtraSectionOne';
 import Craft from '../../components/Craft/Craft';
+import CategoryCards from '../CategoryCards/CategoryCards';
+// import CategoryCards from '../CategoryCards/CategoryCards';
 
 const Home = () => {
   const craft = useLoaderData();
@@ -23,8 +25,8 @@ const Home = () => {
      </div>
      </div>
      <ExtraSectionOne></ExtraSectionOne>
+     <CategoryCards></CategoryCards>
      <ExtraSectionTwo></ExtraSectionTwo>
-     
     </div>
   );
 };

@@ -78,13 +78,13 @@ const AddCraftItems = () => {
           </label>
           <select className="select" value={subcategory_name} onChange={handleSubcategoryChange}>
             <option disabled value="">Pick your sub category</option>
-            <option value="ClaySculpture">Clay Sculpture
+            <option value="Clay Sculpture">Clay Sculpture
             </option>
-            <option value="StoneSculpture">Stone Sculpture</option>
-            <option value="MetalSculpture">Metal Sculpture</option>
-            <option value=" FoodCarving"> Food carving</option>
-            <option value="NaturalMaterialSculpture">Natural Material Sculpture</option>
-            <option value="BeadedSculpture">Beaded Sculpture</option>
+            <option value="Stone Sculpture">Stone Sculpture</option>
+            <option value="Metal Sculpture">Metal Sculpture</option>
+            <option value=" Food carving"> Food carving</option>
+            <option value="Natural Material Sculpture">Natural Material Sculpture</option>
+            <option value="Beaded Sculpture">Beaded Sculpture</option>
           </select>
 
           {errors.email && <span className="text-red-500">This field is required</span>}

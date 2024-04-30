@@ -9,6 +9,7 @@ import AddCraftItems from "../Pages/AddCraftItems/AddCraftItems";
 import MyCraftList from "../Pages/MyCraftList/MyCraftList";
 import Update from "../Pages/Update/Update";
 import AllCraftItems from "../Pages/AllCraftItems/AllCraftItems";
+import RelatedCards from "../Pages/RelatedCards/RelatedCards";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         element:<Details></Details>,
       },
       {
+        path: '/relate/:subcategory_name',
+        element:<RelatedCards></RelatedCards>,
+      },
+      {
         path: '/update/:id',
         element:<Update></Update>,
       },
@@ -54,7 +59,8 @@ const router = createBrowserRouter([
         path:'/allArtCraft',
         element:<AllCraftItems></AllCraftItems>,
         loader: ()=> fetch('http://localhost:5000/craftItem')
-      }
+      },
+      
     ]
   },
 ]);
