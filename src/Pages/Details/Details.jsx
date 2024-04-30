@@ -33,10 +33,10 @@ const Details = () => {
   const { image, item_name, subcategory_name, price, rating, short_description, customization, processing_time, stock_status } = matched || {}
 
   return (
-    <section className=" mb-16 rounded-lg max-w-6xl mx-auto">
-      <div className="container gap-8 flex flex-col mx-auto   lg:flex-row">
+    <section className=" mb-16 my-10 rounded-lg max-w-6xl mx-auto">
+      <div className="container gap-8 flex flex-col mx-auto  lg:flex-row">
         <div className="rounded-lg bg-[#f7f4ef] flex items-center justify-center p-10 lg:p-20 mt-8 lg:mt-0 :h-96">
-          <img data-aos="zoom-in" data-aos-duration='1000' src={image} alt="" className="object-cover h-80" />
+          <img data-aos="zoom-in" data-aos-duration='1000' src={image} alt="" className="object-cover h-72 w-64" />
         </div>
         <div className="flex flex-col  rounded-sm lg:max-w-xl xl:max-w-xl lg:text-left">
           <h1 className="text-2xl lg:text-4xl text-[#131313] font-bold mb-3">{item_name}</h1>
