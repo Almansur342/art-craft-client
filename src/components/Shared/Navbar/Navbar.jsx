@@ -50,28 +50,28 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-vertical px-1">
           {navLink}
         </ul>
       </div>
       <div className="navbar-end">
       {user ?
-         <div className="flex items-center gap-5">
+         <div className="flex items-center gap-1 lg:gap-5">
           <div className="tooltip tooltip-bottom" data-tip={user?.displayName || 'mansur abdullah'}>
-          <img className="object-cover w-16 h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={user?.photoURL || 'Image not found'} alt="" />
+          <img className="object-cover w-10 lg:w-16 h-10 lg:h-16 rounded-full ring ring-gray-300 dark:ring-gray-600" src={user?.photoURL || 'Image not found'} alt="" />
           {/* <img src={user.photoURL} alt="" /> */}
           </div>
           {/* <p>{user?.displayName || 'mansur abdullah'}</p> */}
           <Link to='/'>
-            <button onClick={handleLogOut} className="px-3 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Sign out</button>
+            <button onClick={handleLogOut} className="px-1 lg:px-3 font-semibold text-xs lg:text-base text-white bg-[#b18b5e] rounded py-2">Sign out</button>
           </Link>
         </div> : 
         <div>
           <Link to='/login'>
-            <button className="px-3 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Login</button>
+            <button className="px-2 lg:px-3 font-semibold text-xs lg:text-base text-white bg-[#b18b5e] rounded py-2">Login</button>
           </Link>
           <Link to='/register'>
-            <button className="px-3 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded py-2">Register</button>
+            <button className="px-2 lg:px-3 ml-1 lg:ml-2 font-semibold text-xs lg:text-base text-white bg-[#b18b5e] rounded py-2">Register</button>
           </Link>
         </div>
         }

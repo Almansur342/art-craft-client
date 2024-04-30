@@ -11,9 +11,9 @@ const ExtraSectionTwo = () => {
     AOS.init();
   },[])
   return (
-    <div className="py-24 px-12 ">
-      <h1 className='text-4xl text-center font-semibold mb-14 text-[#34373f]'>Our Services</h1>
-      <div className='flex justify-between items-center gap-4'>
+    <div className="py-8 lg:py-24 px-1 lg:px-12 ">
+      <h1 className='text-3xl lg:text-4xl text-center font-semibold mb-14 text-[#34373f]'>Our Services</h1>
+      <div className='flex flex-col gap-6 lg:flex-row justify-between items-center'>
       <div>
         <img data-aos="flip-left" src={img1} alt="" />
         <h1 className="text-2xl font-medium text-[#34373f] my-1">Free Shipping</h1>

@@ -10,6 +10,7 @@ import MyCraftList from "../Pages/MyCraftList/MyCraftList";
 import Update from "../Pages/Update/Update";
 import AllCraftItems from "../Pages/AllCraftItems/AllCraftItems";
 import RelatedCards from "../Pages/RelatedCards/RelatedCards";
+import PrivateRoute from "../Firebase/PrivateRoute/PrivateRoute";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
       
       {
         path: '/item/:id',
-        element:<Details></Details>,
+        element:<PrivateRoute><Details></Details></PrivateRoute>,
       },
       {
         path: '/relate/:subcategory_name',
@@ -49,11 +50,11 @@ const router = createBrowserRouter([
       },
       {
         path:'/addCraftItem',
-        element:<AddCraftItems></AddCraftItems>
+        element:<PrivateRoute><AddCraftItems></AddCraftItems></PrivateRoute>
       },
       {
         path:'/myArtCraft',
-        element:<MyCraftList></MyCraftList>
+        element:<PrivateRoute><MyCraftList></MyCraftList></PrivateRoute>
       },
       {
         path:'/allArtCraft',

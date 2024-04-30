@@ -2,8 +2,10 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Firebase/AuthProvider/AuthProvider";
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 
 const AddCraftItems = () => {
+  const navigate = useNavigate()
   const Toast = Swal.mixin({
     toast: true,
     position: "top-end",
@@ -41,6 +43,7 @@ const AddCraftItems = () => {
           title: 'Product added successfully',
         })
       }
+      navigate('/myArtCraft')
     })
   }
   

@@ -68,8 +68,8 @@ const MyCard = ({ items,item,setItems }) => {
         </div>
         <p className="mb-4">{short_description}</p>
         <div className="card-actions">
-          <Link to={`/update/${_id}`} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">Update</Link>
-          <button onClick={()=>handleDelete(_id)} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">Delete</button>
+          <Link to={`/update/${_id}`} className=" px-2 lg:px-5 py-2 ml-1 lg:ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">Update</Link>
+          <button onClick={()=>handleDelete(_id)} className="px-2 lg:px-5 py-2 ml-1 lg:ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">Delete</button>
           {/* <Link to={`/details/${_id}`} className="px-5 py-2 ml-2 font-semibold text-base text-white bg-[#b18b5e] rounded">View Details</Link> */}
         </div>
       </div>

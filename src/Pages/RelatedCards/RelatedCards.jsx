@@ -26,7 +26,7 @@ const RelatedCards = () => {
   // console.log(image)
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-16">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-16">
       {
         matched.map(p=> <div key={p._id} data-aos="fade-up" data-aos-duration = '1000' className="card bg-[#f7f4ef] p-6 shadow-xl">
         <figure><img className="h-56 w-full rounded-lg object-cover" src={p.image} alt="Shoes" /></figure>

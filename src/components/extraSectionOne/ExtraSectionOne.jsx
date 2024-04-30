@@ -9,9 +9,9 @@ const ExtraSectionOne = () => {
     AOS.init();
   },[])
   return (
-    <div className=" py-24 px-12 rounded  bg-[#f8f5ef]">
-      <h1 className="text-4xl text-center font-semibold mb-16 text-[#34373f]">Designed by artists, made <br /> by us, just for you.</h1>
-      <div className='flex items-center justify-between '>
+    <div className=" py-6 lg:py-24 px-1 lg:px-12 rounded  bg-[#f8f5ef]">
+      <h1 className="text-xl lg:text-4xl text-center font-semibold mb-16 text-[#34373f]">Designed by artists, made <br /> by us, just for you.</h1>
+      <div className='flex flex-col gap-8 lg:flex-row items-center justify-between '>
       <div>
         <img data-aos="zoom-in" data-aos-duration = '2000' className='h-[222px] w-[222px] rounded-full object-cover' src={img1} alt="" />
         <h1 className='text-2xl font-medium ml-7 mt-2'>Basket Storage</h1>
