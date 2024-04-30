@@ -1,8 +1,24 @@
-# React + Vite
+# Krafti.Art Showcase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Krafti.Art, your gateway to a world of artistic expression through sculpture. Explore our diverse collection of sculptures crafted from various materials, each showcasing the unique vision and skill of talented artists.
 
-Currently, two official plugins are available:
+Live Site URL: [Krafti.Art](https://www.krafti.art)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Sculpture and Modeling
+- **Clay Sculpture**
+- **Stone Sculpture**
+- **Metal Sculpture**
+- **Food Carving**
+- **Natural Material Sculpture**
+- **Beaded Sculpture**
+
+## Features
+- **Responsive Design**: Enjoy a seamless browsing experience across all devices, from desktops to mobile phones, ensuring accessibility for all art enthusiasts.
+
+- **Engaging Animation**: Immerse yourself in the world of sculpture with dynamic animations that bring artworks to life, enhancing the overall viewing experience.
+
+- **User-Friendly Interface**: Navigate effortlessly through our website and easily add your favorite sculptures to your collection or wishlist with intuitive features.
+
+- **Detailed Product Showcase**: Dive deep into the world of sculpture with our curated selection of artworks, each accompanied by detailed information and high-resolution images.
+
+- **Interactive Experience**: Expand your knowledge and appreciation for sculpture with interactive features and educational content, enriching your journey through the world of art.
