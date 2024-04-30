@@ -26,7 +26,7 @@ const Navbar = () => {
 
     <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/myArtCraft' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>My Art&Craft List</NavLink></li>
 
-    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/updateProfile' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
+    <li className="font-bold text-base hover:text-[#b18b5e] shadow-none hover:border-b border-b-[#b18b5e] bg-white"><NavLink to='/allArtCraft' className={({ isActive }) => isActive ? 'text-[#b18b5e] ' :'hover:text-[#b18b5e] text-[#131313CC]'}>All Art & craft Items</NavLink></li>
 
     
 
