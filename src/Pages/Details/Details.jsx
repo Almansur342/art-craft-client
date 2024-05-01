@@ -21,7 +21,7 @@ const Details = () => {
   //   }
   // },[craftDetails,id])
   useEffect(() => {
-    fetch(`http://localhost:5000/singleItem/${id}`)
+    fetch(`https://art-craft-server-orpin.vercel.app/singleItem/${id}`)
     .then(res => res.json())
     .then(data=>{
       // console.log(data);

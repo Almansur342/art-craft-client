@@ -12,7 +12,7 @@ const RelatedCards = () => {
   const [matched, setMatched] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/relatedProduct/${subcategory_name}`)
+    fetch(`https://art-craft-server-orpin.vercel.app/relatedProduct/${subcategory_name}`)
     .then(res => res.json())
     .then(data=>{
       // console.log(data);
@@ -54,6 +54,7 @@ const RelatedCards = () => {
       </div>)
       }
     </div>
+    
     
   );
 };

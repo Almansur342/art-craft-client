@@ -4,7 +4,7 @@ import Category from "../../components/Category/Category";
 const CategoryCards = () => {
   const [category, setCategory]= useState([]);
  useEffect(()=>{
-  fetch('http://localhost:5000/categoryCraftItem')
+  fetch('https://art-craft-server-orpin.vercel.app/categoryCraftItem')
   .then(res => res.json())
   .then(data => {
     // console.log(data);

@@ -2,7 +2,7 @@
 
 Welcome to Krafti.Art, your gateway to a world of artistic expression through sculpture. Explore our diverse collection of sculptures crafted from various materials, each showcasing the unique vision and skill of talented artists.
 
-Live Site URL: [Krafti.Art](https://www.krafti.art)
+Live Site URL: [Krafti.Art](https://art-craft-ec106.web.app/)
 
 ## Sculpture and Modeling
 - **Clay Sculpture**

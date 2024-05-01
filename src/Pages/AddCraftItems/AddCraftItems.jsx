@@ -27,7 +27,7 @@ const AddCraftItems = () => {
     // console.log(user?.email, selectedSubcategory,image,itemName,description,price,rating,customization,time,stockStatus);
     const info = {email,image,item_name,subcategory_name, short_description, price, rating, customization, processing_time, stock_status}
     console.log(info);
-    fetch('http://localhost:5000/addProduct',{
+    fetch('https://art-craft-server-orpin.vercel.app/addProduct',{
       method: 'POST',
       headers:{
         'content-type': 'application/json'

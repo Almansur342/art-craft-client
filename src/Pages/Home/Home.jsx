@@ -5,10 +5,13 @@ import ExtraSectionTwo from '../../components/ExtraSectionTwo/ExtraSectionTwo';
 import ExtraSectionOne from '../../components/extraSectionOne/ExtraSectionOne';
 import Craft from '../../components/Craft/Craft';
 import CategoryCards from '../CategoryCards/CategoryCards';
+import { useState } from 'react';
 // import CategoryCards from '../CategoryCards/CategoryCards';
 
 const Home = () => {
   const craft = useLoaderData();
+  // const [loadedData,setLoadedData] = useState()
+  console.log(craft);
   return (
     <div>
      <Banner></Banner>
