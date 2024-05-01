@@ -85,7 +85,7 @@ const AddCraftItems = () => {
             </option>
             <option value="Stone Sculpture">Stone Sculpture</option>
             <option value="Metal Sculpture">Metal Sculpture</option>
-            <option value=" Food carving"> Food carving</option>
+            <option value="Food carving"> Food carving</option>
             <option value="Natural Material Sculpture">Natural Material Sculpture</option>
             <option value="Beaded Sculpture">Beaded Sculpture</option>
           </select>
