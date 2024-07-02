@@ -1,6 +1,7 @@
 # Krafti.Art Showcase
 
-Welcome to Krafti.Art, your gateway to a world of artistic expression through sculpture. Explore our diverse collection of sculptures crafted from various materials, each showcasing the unique vision and skill of talented artists.
+## Project Overview
+Welcome to Krafti.Art, your gateway to a world of artistic expression through sculpture. Explore our diverse collection of sculptures crafted from various materials, each showcasing the unique vision and skill of talented artists. Here, you can add your own art and craft items to share your creativity with the world. You can also manage your contributions by updating or deleting them as needed. Join our community, discover inspiring works, and contribute your unique pieces to our growing gallery
 
 Live Site URL: [Krafti.Art](https://art-craft-ec106.web.app/)
 
@@ -22,3 +23,19 @@ Live Site URL: [Krafti.Art](https://art-craft-ec106.web.app/)
 - **Detailed Product Showcase**: Dive deep into the world of sculpture with our curated selection of artworks, each accompanied by detailed information and high-resolution images.
 
 - **Interactive Experience**: Expand your knowledge and appreciation for sculpture with interactive features and educational content, enriching your journey through the world of art.
+
+
+## Technologies Used
+
+- **React.js**
+- **Express.js**
+- **MongoDB**
+- **Firebase**
+- **Tailwind CSS**
+- **JWT token**
+
+ ## Run this project locally
+
+  - **Clone this project using git clone**
+  - **npm install**
+  - **npm run dev**
